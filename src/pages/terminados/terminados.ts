@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DeseosService } from '../../providers/deseos.serivce';
+import { DeseosService } from '../../providers/deseos.service';
 
 @Component({
   selector: 'page-terminados',

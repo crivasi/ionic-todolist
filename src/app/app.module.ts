@@ -17,7 +17,7 @@ import { TerminadosPage } from '../pages/terminados/terminados';
 import { AgregarListaPage } from '../pages/agregar-lista/agregar-lista';
 
 //services
-import { DeseosService } from '../providers/deseos.serivce';
+import { DeseosService } from '../providers/deseos.service';
 
 @NgModule({
   declarations: [

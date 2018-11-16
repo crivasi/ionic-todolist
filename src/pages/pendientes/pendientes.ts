@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DeseosService } from '../../providers/deseos.serivce';
+import { DeseosService } from '../../providers/deseos.service';
 import { Lista } from '../../models';
 import { NavController, AlertController, NavParams } from 'ionic-angular';
 import { AgregarListaPage } from '../agregar-lista/agregar-lista';
@@ -19,7 +19,9 @@ export class PendientesPage {
   }
 
   seleccionarLista(lista:Lista) {
-
+    this.navCtrl.push( AgregarListaPage, {
+      lista
+    });
   }
 
   agregarLista() {
