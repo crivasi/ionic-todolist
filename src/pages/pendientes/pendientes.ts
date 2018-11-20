@@ -28,6 +28,10 @@ export class PendientesPage {
     this.mostrarAlerta();
   }
 
+  borrarLista(lista: Lista) {
+    this.deseosService.borrarLista(lista);
+  }
+
   mostrarAlerta() {
     const alerta = this.alertCtrl.create({
       title: 'Nueva lista',

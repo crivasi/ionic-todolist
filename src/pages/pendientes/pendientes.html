@@ -9,9 +9,28 @@
 <ion-content>
   <img src="../../assets/imgs/pendientes.jpg">
   <ion-list>
-    <button ion-item *ngFor="let lista of deseosService.listas" (click)="seleccionarLista(lista)">
-      {{ lista.title }}
-    </button>  
+    <ion-item-sliding
+    *ngFor="let lista of deseosService.listas | filtroCompletado:false"
+    (click)="seleccionarLista(lista)"
+    class="animated fadeInDown">
+      <button ion-item >
+        {{ lista.title }}
+        <ion-note item-end>
+            {{ lista.items.length }} items
+        </ion-note>
+      </button>   
+      <ion-item-options side="left">
+        <button 
+          ion-button 
+          color="danger"
+          icon-only
+          (click)="borrarLista(lista)">
+          <ion-icon 
+            name="close">
+          </ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
 
   <ion-fab right bottom>
